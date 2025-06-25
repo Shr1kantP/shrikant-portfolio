@@ -1268,21 +1268,18 @@ textarea:focus {
     box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   }
   .accordion-header {
-    font-family: "Akira Expanded", Poppins, sans-serif !important;
-    font-size: 1.25rem !important;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: bold !important;
-    background: none !important;
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-    color: #111 !important;
-    padding: 1rem !important;
-    margin: 0 !important;
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    -moz-appearance: none !important;
+    width: 100%;
+    text-align: left;
+    background: #f5f5f5;
+    border: none;
+    outline: none;
+    font-family: "Akira Expanded", Poppins, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
   }
   .accordion-header[aria-expanded="true"] {
     background: #e0e0e0;
