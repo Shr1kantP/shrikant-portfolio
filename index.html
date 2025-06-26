@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="title-icon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/icons/title-icon.ico">
 </head>
 <body>
   <!-- Navbar -->
@@ -72,7 +72,7 @@
     <h2 class="section-title">SKILLS</h2>
     <div class="skills-grid" id="skills-accordion">
       <div class="skill-sticker accordion-item">
-        <h3 class="accordion-header">Languages & Tech</h3>
+        <h3 class="accordion-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Languages & Tech Icon" style="width:32px;height:32px;vertical-align:middle;margin-right:0.5em;">Languages & Tech</h3>
         <div class="accordion-panel" id="panel-languages" role="region" aria-labelledby="accordion-languages">
           <ul>
             <li>Python</li>
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="skill-sticker accordion-item">
-        <h3 class="accordion-header">Design Tools</h3>
+        <h3 class="accordion-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Design Tools Icon" style="width:32px;height:32px;vertical-align:middle;margin-right:0.5em;">Design Tools</h3>
         <div class="accordion-panel" id="panel-design" role="region" aria-labelledby="accordion-design">
           <ul>
             <li>Figma</li>
@@ -95,7 +95,7 @@
         </div>
       </div>
       <div class="skill-sticker accordion-item">
-        <h3 class="accordion-header">AI & Data Tools</h3>
+        <h3 class="accordion-header"><img src="https://th.bing.com/th/id/OIP.j_46DDENRisOFr1rg6LiOAHaHa?rs=1&pid=ImgDetMain" alt="AI & Data Tools Icon" style="width:32px;height:32px;vertical-align:middle;margin-right:0.5em;">AI & Data Tools</h3>
         <div class="accordion-panel" id="panel-ai" role="region" aria-labelledby="accordion-ai">
           <ul>
             <li>ChatGPT</li>
@@ -106,7 +106,7 @@
         </div>
       </div>
       <div class="skill-sticker accordion-item">
-        <h3 class="accordion-header">Collaboration Tools</h3>
+        <h3 class="accordion-header"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="Collaboration Tools Icon" style="width:32px;height:32px;vertical-align:middle;margin-right:0.5em;">Collaboration Tools</h3>
         <div class="accordion-panel" id="panel-collab" role="region" aria-labelledby="accordion-collab">
           <ul>
             <li>GitHub</li>
@@ -223,11 +223,17 @@
       <p>Email: <a href="mailto:pshrikantwork@hotmail.com">pshrikantwork@hotmail.com</a></p>
       <p>Phone: <a href="tel:+918169036397">+91 8169036397</a></p>
       <div class="contact-socials">
-        <a href="https://github.com/pshrikantwork" target="_blank" rel="noopener" class="social-icon"><img src="https://pngimg.com/uploads/github/github_PNG20.png" alt="GitHub" style="max-width:36px; max-height:36px;"></a>
-        <a href="https://linkedin.com/in/pshrikantwork" target="_blank" rel="noopener" class="social-icon"><img src="https://icon-library.com/images/linked-in-icon-black-and-white/linked-in-icon-black-and-white-2.jpg" alt="LinkedIn" style="max-width:36px; max-height:36px;"></a>
-        <a href="https://beacons.ai/pshrikantwork" target="_blank" rel="noopener" class="social-icon"><img src="https://www.colormango.com/development/boxshot/beacons-ai_154511.png" alt="Beacons" style="max-width:60px; max-height:36px;"></a>
+        <a href="https://github.com/Shr1kantP" target="_blank" rel="noopener" class="social-icon"><img src="https://pngimg.com/uploads/github/github_PNG20.png" alt="GitHub" style="max-width:36px; max-height:36px;"></a>
+        <a href="https://www.linkedin.com/in/shrikant-02-jp" target="_blank" rel="noopener" class="social-icon"><img src="https://icon-library.com/images/linked-in-icon-black-and-white/linked-in-icon-black-and-white-2.jpg" alt="LinkedIn" style="max-width:36px; max-height:36px;"></a>
+        <a href="https://beacons.ai/srikso" target="_blank" rel="noopener" class="social-icon"><img src="https://www.colormango.com/development/boxshot/beacons-ai_154511.png" alt="Beacons" style="max-width:60px; max-height:36px;"></a>
       </div>
     </div>
+
+    <!-- Full Page Drawing Canvas Section -->
+    <section class="draw-section" style="position:relative;width:100vw;height:40vh;min-height:320px;display:flex;align-items:center;justify-content:center;background:linear-gradient(120deg,#f5f7fa 80%,#e0e7ff 100%);margin:0;padding:0;z-index:1;">
+      <button id="clear-canvas" style="position:absolute;top:2.0rem;left:3rem;padding:0.5rem 1.5rem;font-family:var(--mono);font-size:1.3rem;background:rgba(255, 255, 255, 0.95);color:#000000;border:none;border-radius:8px;cursor:pointer;z-index:10;box-shadow:0 2px 8px rgba(0,0,0,0.10);">Erase</button>
+      <canvas id="draw-canvas" width="1920" height="400" style="width:100vw;height:40vh;display:block;background:#fff;border-radius:0;box-shadow:none;border:none;touch-action:none;cursor:crosshair;z-index:2;"></canvas>
+    </section>
   </section>
 
   <!-- Footer -->
