@@ -15,8 +15,169 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="assets/icons/title-icon.ico">
+  <style>
+    /* Mobile View Popup Styles - Minimalist */
+    .mobile-popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+
+    .mobile-popup-overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-popup {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 380px;
+      width: 90%;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+      transform: translateY(20px) scale(0.95);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .mobile-popup.show {
+      transform: translateY(0) scale(1);
+    }
+
+    .mobile-popup h2 {
+      color: #111;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .mobile-popup p {
+      color: #666;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.9rem;
+      margin-bottom: 32px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    .mobile-popup-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .mobile-popup-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+      letter-spacing: 0.02em;
+    }
+
+    .mobile-popup-btn.primary {
+      background: #111;
+      color: white;
+    }
+
+    .mobile-popup-btn.primary:hover {
+      background: #333;
+      transform: translateY(-1px);
+    }
+
+    .mobile-popup-btn.secondary {
+      background: transparent;
+      color: #666;
+      border: 1px solid #ddd;
+    }
+
+    .mobile-popup-btn.secondary:hover {
+      background: #f8f9fa;
+      border-color: #ccc;
+      color: #333;
+    }
+
+    .mobile-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 24px;
+      background: #f8f9fa;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #eee;
+    }
+
+    .mobile-icon svg {
+      width: 24px;
+      height: 24px;
+      fill: #666;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-popup {
+        padding: 40px 24px;
+        margin: 20px;
+        border-radius: 12px;
+      }
+      
+      .mobile-popup h2 {
+        font-size: 1.5rem;
+      }
+      
+      .mobile-popup-buttons {
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .mobile-popup-btn {
+        width: 100%;
+        padding: 14px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Mobile View Popup -->
+  <div class="mobile-popup-overlay" id="mobilePopup">
+    <div class="mobile-popup" id="mobilePopupContent">
+      <div class="mobile-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 2H7C5.9 2 5 2.9 5 4V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V4C19 2.9 18.1 2 17 2ZM17 20H7V4H17V20Z"/>
+          <path d="M12 18C12.55 18 13 17.55 13 17C13 16.45 12.55 16 12 16C11.45 16 11 16.45 11 17C11 17.55 11.45 18 12 18Z"/>
+        </svg>
+      </div>
+      <h2>Switch to Mobile View</h2>
+      <p>Experience a mobile-optimized version of this portfolio with touch-friendly navigation and responsive design.</p>
+      <div class="mobile-popup-buttons">
+        <a href="index-mob.html" class="mobile-popup-btn primary">Switch to Mobile</a>
+        <button class="mobile-popup-btn secondary" onclick="closeMobilePopup()">Stay on Desktop</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <nav id="navbar" class="vertical-navbar">
     <button class="hamburger" id="hamburger-btn" aria-label="Open navigation menu">
